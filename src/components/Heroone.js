@@ -1,5 +1,5 @@
 import { Parallax } from 'react-parallax';
-import backgroundImage from '../assets/6.jpg';
+import backgroundImage from '../assets/giacche.jpg';
 import './Heroone.css';
 
 function Heroone() {

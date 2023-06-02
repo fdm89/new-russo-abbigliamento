@@ -2,7 +2,7 @@ import React from 'react';
 import { Parallax } from 'react-parallax';
 import { useMediaQuery } from 'react-responsive';
 import backgroundImage from '../assets/8.jpg';
-import backgroundImageMobile from '../assets/image05.jpeg';
+import backgroundImageMobile from '../assets/manichino.jpg';
 import './Herotwo.css';
 
 function Herotwo() {
