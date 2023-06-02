@@ -3,11 +3,17 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import posthog from 'posthog-js'
+
+posthog.init('phc_2B1d0VnBrjOOduWZO5byP9WJaV5ZZYfmejG1Zgj1s0J', { api_host: 'https://app.posthog.com' })
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    
+      <App /> 
+    
   </React.StrictMode>
 );
 
