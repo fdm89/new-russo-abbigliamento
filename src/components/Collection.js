@@ -21,6 +21,9 @@ function Collection() {
         <Carousel></Carousel>
         <h2>Completi Spezzati</h2>
         <CarouselTwo></CarouselTwo>
+        <h2>Completi Spezzati</h2>
+        <CarouselTwo></CarouselTwo>
+        
         <Footer></Footer>
     </div>
     
