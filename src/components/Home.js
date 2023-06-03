@@ -14,33 +14,25 @@ import CookieBanner from "./CookieBanner";
 import { posthog } from 'posthog-js';
 
 const homeContainerStyle = {
-  backgroundSize: 'cover',
-  backgroundPosition: 'center',
-  backgroundRepeat: 'no-repeat',
   width: '100%',
   height: '100vh',
-  transition: 'background-image 0.7s ease, opacity 0.7s ease',
-  opacity: 1,
+  position: 'relative',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  textAlign: 'center',
-  fontSize: '3rem',
-  color: 'white',
-  textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
 };
 
 const images = [
   {
-    backgroundImage: backgroundImage1,
+    url: backgroundImage1,
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
   {
-    backgroundImage: backgroundImage2,
+    url: backgroundImage2,
     text: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
   },
   {
-    backgroundImage: backgroundImage3,
+    url: backgroundImage3,
     text: "Nullam non nisl id dolor efficitur volutpat.",
   },
 ];
@@ -64,11 +56,6 @@ function Home() {
     window.scrollTo({ top: 0, behavior: "instant" });
   }, []);
 
-  const handleImageLoad = () => {
-    homeRef.current.style.backgroundImage = `url(${images[currentImageIndex].backgroundImage})`;
-    homeRef.current.style.opacity = 1;
-  };
-
   return (
     <div className="home-container" ref={homeRef}>
       <Helmet>
@@ -85,12 +72,9 @@ function Home() {
       </a>
       {posthog.has_opted_out_capturing() || posthog.has_opted_in_capturing() ? null : <CookieBanner />}
 
-      <div
-        style={{ ...homeContainerStyle, backgroundImage: `url(${images[currentImageIndex].backgroundImage})` }}
-        onLoad={handleImageLoad}
-        alt="Background image description"
-      >
-        {images[currentImageIndex].text}
+      <div className="background-image" style={homeContainerStyle}>
+        <img className="test" src={images[currentImageIndex].url} alt="Back" />
+        <div className="image-text">{images[currentImageIndex].text}</div>
       </div>
 
       <div className="banner" id="banner">

@@ -5,6 +5,23 @@
     
     
   }
+
+  .test{
+    height: 100%;
+    width: 100%;
+  }
+
+  .image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
   
 
   
@@ -16,6 +33,7 @@
     color: black;
     font-size: 30px;
     animation: pulse 2s infinite;
+    z-index: 99999;
   }
   
   @keyframes pulse {
