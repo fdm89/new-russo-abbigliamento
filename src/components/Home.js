@@ -19,7 +19,8 @@ const homeContainerStyle = {
   backgroundRepeat: 'no-repeat',
   width: '100%',
   height: '100vh',
-  transition: 'background-image 0.7s ease',
+  transition: 'background-image 0.7s ease, opacity 0.7s ease',
+  opacity: 1,
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
@@ -65,6 +66,7 @@ function Home() {
 
   const handleImageLoad = () => {
     homeRef.current.style.backgroundImage = `url(${images[currentImageIndex].backgroundImage})`;
+    homeRef.current.style.opacity = 1;
   };
 
   return (
