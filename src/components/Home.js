@@ -12,6 +12,7 @@ import Footer from "./Footer";
 import Button from "./Button";
 import CookieBanner from "./CookieBanner";
 import { posthog } from 'posthog-js';
+import CarouselHome from "./CarouselHome";
 
 const homeContainerStyle = {
   width: '100%',
@@ -24,23 +25,25 @@ const homeContainerStyle = {
 
 const images = [
   {
-    url: backgroundImage1,
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    url: backgroundImage1
+    
   },
   {
-    url: backgroundImage2,
-    text: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+    url: backgroundImage2
+    
   },
   {
-    url: backgroundImage3,
-    text: "Nullam non nisl id dolor efficitur volutpat.",
+    url: backgroundImage3
+    
   },
 ];
 const imageChangeInterval = 5000; // Change image every 5 seconds
 
+
 function Home() {
   const homeRef = useRef(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   useEffect(() => {
     const imageChangeTimer = setInterval(() => {
@@ -55,6 +58,10 @@ function Home() {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" });
   }, []);
+
+  const handleImageLoad = () => {
+    setIsImageLoaded(true);
+  };
 
   return (
     <div className="home-container" ref={homeRef}>
@@ -73,8 +80,12 @@ function Home() {
       {posthog.has_opted_out_capturing() || posthog.has_opted_in_capturing() ? null : <CookieBanner />}
 
       <div className="background-image" style={homeContainerStyle}>
-        <img className="test" src={images[currentImageIndex].url} alt="Back" />
-        <div className="image-text">{images[currentImageIndex].text}</div>
+      <img
+  className={`test ${isImageLoaded ? "loaded" : ""}`}
+  src={images[currentImageIndex].url}
+  alt="Back"
+  onLoad={handleImageLoad}
+/>
       </div>
 
       <div className="banner" id="banner">
@@ -87,7 +98,7 @@ function Home() {
       <Herotwo />
 
       <h1 className="carousel-header">Collezione primavera estate 2023</h1>
-      {/* Add your carousel component here */}
+      <CarouselHome/>
 
       <Footer></Footer>
     </div>
