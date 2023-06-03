@@ -8,7 +8,6 @@
   
   .home-container::before {
     content: "";
-    background-image: url("../assets/immagine-hero.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
