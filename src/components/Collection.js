@@ -7,7 +7,7 @@ import CarouselTwo from './CarouselTwo';
 
 function Collection() {
     useEffect(() => {
-        window.scrollTo({ top: 0, behavior: "instant" });
+        window.scrollTo({ top: 0, left:0, behavior: "instant" });
       }, [])
     
     return <div className="container">
@@ -17,6 +17,8 @@ function Collection() {
                 <meta name="keywords" content="collezione, abiti, camicie, maglieria, abbigliamento uomo, maglieria, camiceria, pantaloni, capispalla, Made in Italy, sartoriale, abiti" />
             </Helmet>
         <h1>Collection</h1>
+        <h2>Completi Spezzati</h2>
+        <CarouselTwo></CarouselTwo>
         <h2>Abiti</h2>
         <Carousel></Carousel>
         <h2>Completi Spezzati</h2>
