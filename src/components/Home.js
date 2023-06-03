@@ -43,7 +43,7 @@ const images = [
     text: "Nullam non nisl id dolor efficitur volutpat.",
   },
 ];
-const imageChangeInterval = 3000; // Change image every 5 seconds
+const imageChangeInterval = 5000; // Change image every 5 seconds
 
 function Home() {
   const homeRef = useRef(null);
