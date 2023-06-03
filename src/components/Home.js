@@ -19,7 +19,7 @@ const homeContainerStyle = {
   backgroundRepeat: 'no-repeat',
   width: '100%',
   height: '100vh',
-  transition: 'background-image 0.7s ease-in',
+  transition: 'background-image 0.7s ease',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
