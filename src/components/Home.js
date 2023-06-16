@@ -1,10 +1,7 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect } from "react";
 import { Helmet } from 'react-helmet';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDoubleDown } from "@fortawesome/free-solid-svg-icons";
-import backgroundImage1 from '../assets/russo-1328422806574-43.jpg';
-import backgroundImage2 from '../assets/russo-2803540072784-28.jpg';
-import backgroundImage3 from '../assets/russo-1328422806574-41.jpg';
 import './Home.css';
 import Heroone from "./Heroone";
 import Herotwo from "./Herotwo";
@@ -12,6 +9,7 @@ import Footer from "./Footer";
 import Button from "./Button";
 import CookieBanner from "./CookieBanner";
 import { posthog } from 'posthog-js';
+import video from '../assets/man_-_62550 (1080p).mp4';
 import CarouselHome from "./CarouselHome";
 
 const homeContainerStyle = {
@@ -23,45 +21,12 @@ const homeContainerStyle = {
   justifyContent: 'center',
 };
 
-const images = [
-  {
-    url: backgroundImage1
-    
-  },
-  {
-    url: backgroundImage2
-    
-  },
-  {
-    url: backgroundImage3
-    
-  },
-];
-const imageChangeInterval = 5000; // Change image every 5 seconds
-
-
 function Home() {
   const homeRef = useRef(null);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [isImageLoaded, setIsImageLoaded] = useState(false);
-
-  useEffect(() => {
-    const imageChangeTimer = setInterval(() => {
-      setCurrentImageIndex(prevIndex => (prevIndex + 1) % images.length);
-    }, imageChangeInterval);
-
-    return () => {
-      clearInterval(imageChangeTimer);
-    };
-  }, []);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" });
   }, []);
-
-  const handleImageLoad = () => {
-    setIsImageLoaded(true);
-  };
 
   return (
     <div className="home-container" ref={homeRef}>
@@ -79,13 +44,8 @@ function Home() {
       </a>
       {posthog.has_opted_out_capturing() || posthog.has_opted_in_capturing() ? null : <CookieBanner />}
 
-      <div className="background-image" style={homeContainerStyle}>
-      <img
-  className={`test ${isImageLoaded ? "loaded" : ""}`}
-  src={images[currentImageIndex].url}
-  alt="Back"
-  onLoad={handleImageLoad}
-/>
+      <div  style={homeContainerStyle}>
+        <video className="background-video" src={video} autoPlay loop muted />
       </div>
 
       <div className="banner" id="banner">
@@ -98,7 +58,7 @@ function Home() {
       <Herotwo />
 
       <h1 className="carousel-header">Collezione primavera estate 2023</h1>
-      <CarouselHome/>
+      <CarouselHome></CarouselHome>
 
       <Footer></Footer>
     </div>
