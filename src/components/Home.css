@@ -18,7 +18,7 @@
     top: 0;
     left: 0;
     opacity: 0;
-    transition: opacity 0.5s ease-in;
+    transition: opacity 0.1s ease-in;
   }
   
   .background-video.loaded {
