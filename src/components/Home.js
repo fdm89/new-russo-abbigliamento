@@ -12,7 +12,15 @@ import { posthog } from 'posthog-js';
 import video from '../assets/man_-_62550 (1080p).mp4';
 import CarouselHome from "./CarouselHome";
 
-
+const homeContainerStyle = {
+  width: '100%',
+  height: '120vh',
+  position: 'relative',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  
+};
 
 function Home() {
   const homeRef = useRef(null);
@@ -38,9 +46,9 @@ function Home() {
       </a>
       {posthog.has_opted_out_capturing() || posthog.has_opted_in_capturing() ? null : <CookieBanner />}
 
-      
+      <div  style={homeContainerStyle}>
         <video className="background-video" src={video} autoPlay loop muted/>
-      
+      </div>
 
       <div className="banner" id="banner">
         <p>Outerwear</p>
