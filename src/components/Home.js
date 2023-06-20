@@ -9,7 +9,7 @@ import Footer from "./Footer";
 import Button from "./Button";
 import CookieBanner from "./CookieBanner";
 import { posthog } from 'posthog-js';
-import video from '../assets/BOZZA2.mp4';
+import video from '../assets/RUSSOVIDEO(1).mp4';
 import CarouselHome from "./CarouselHome";
 
 const homeContainerStyle = {
