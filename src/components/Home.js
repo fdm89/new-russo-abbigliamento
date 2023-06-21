@@ -15,6 +15,7 @@ import CookieBanner from "./CookieBanner";
 import { posthog } from 'posthog-js';
 import CarouselHome from "./CarouselHome";
 import Carousel from "./Carousel";
+import Collection from "-/Collection"
 
 const homeContainerStyle = {
   width: '100%',
@@ -101,10 +102,10 @@ function Home() {
       <Herothree />
 
       <h1 className="carousel-header">Collezione primavera estate 2023</h1>
-      <div className="carosello">
+      
       <CarouselHome/>
       <Carousel />
-      </div>
+     <Collection />
 
       <Footer></Footer>
     </div>

@@ -15,31 +15,53 @@ import image11 from '../assets/russo-6766051011740-21.jpg';
 import image12 from '../assets/russo-6766051011740-23.jpg';
 import image13 from '../assets/russo-6813003337042-24.jpg';
 
-
-const images = [image8, image9, image10, image11, image12, image13, image1, image2, image3, image4, image5, image6, image7];
+const images = [
+  image8,
+  image9,
+  image10,
+  image11,
+  image12,
+  image13,
+  image1,
+  image2,
+  image3,
+  image4,
+  image5,
+  image6,
+  image7,
+];
 
 function CarouselHome() {
-  const carousel = useRef();
+  const carouselRef = useRef();
   const [width, setWidth] = useState(0);
 
-
- 
-  
-
   useEffect(() => {
-    setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth);
+    const carouselElement = carouselRef.current;
+    const updateWidth = () => {
+      setWidth(carouselElement?.scrollWidth - carouselElement?.offsetWidth);
+    };
+    updateWidth();
+
+    const handleScroll = () => {
+      // Handle scroll event if needed
+    };
+
+    carouselElement.addEventListener('scroll', handleScroll);
+
+    return () => {
+      carouselElement.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   const handleWheel = (event) => {
     if (event.deltaX !== 0) {
-      carousel.current.scrollLeft += event.deltaX;
+      carouselRef.current.scrollLeft += event.deltaX;
     }
   };
 
-
   return (
     <div className="carousel-container" onWheel={handleWheel}>
-      <motion.div ref={carousel} className="carousel">
+      <motion.div ref={carouselRef} className="carousel">
         <motion.div
           className="inner"
           drag="x"
@@ -50,10 +72,7 @@ function CarouselHome() {
         >
           {images.map((image) => (
             <motion.div className="item" key={image}>
-              <img 
-               src={image}
-               alt="nuova collezione"
-              />
+              <img src={image} alt="nuova collezione" />
             </motion.div>
           ))}
         </motion.div>
@@ -63,8 +82,3 @@ function CarouselHome() {
 }
 
 export default CarouselHome;
-
-
-
-
-
