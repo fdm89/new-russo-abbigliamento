@@ -1,8 +1,8 @@
 import React from 'react'; 
-import nuovaImmagine from '../assets/hero1.jpg';
-import './Heroone.css';
+import nuovaImmagine from '../assets/hero3.jpg';
+import './Herothree.css';
 
-function Heroone() {
+function Herothree() {
   return (
     
      
@@ -14,4 +14,4 @@ function Heroone() {
   );
 };
 
-export default Heroone;
+export default Herothree;

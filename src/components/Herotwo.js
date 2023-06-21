@@ -1,5 +1,5 @@
 import React from 'react';
-import nuovaImmagine from '../assets/orizzontale-home-hd.jpg';
+import nuovaImmagine from '../assets/hero2.jpg';
 
 import './Herotwo.css';
 

@@ -2,12 +2,13 @@ import React, { useRef, useEffect, useState } from "react";
 import { Helmet } from 'react-helmet';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDoubleDown } from "@fortawesome/free-solid-svg-icons";
-import backgroundImage1 from '../assets/russo-1328422806574-43.jpg';
-import backgroundImage2 from '../assets/russo-2803540072784-28.jpg';
-import backgroundImage3 from '../assets/russo-1328422806574-41.jpg';
+import backgroundImage1 from '../assets/home1.jpg';
+import backgroundImage2 from '../assets/home2.jpg';
+import backgroundImage3 from '../assets/home3.jpg';
 import './Home.css';
 import Heroone from "./Heroone";
 import Herotwo from "./Herotwo";
+import Herothree from "./Herothree";
 import Footer from "./Footer";
 import Button from "./Button";
 import CookieBanner from "./CookieBanner";
@@ -96,6 +97,7 @@ function Home() {
       </div>
       <Heroone />
       <Herotwo />
+      <Herothree />
 
       <h1 className="carousel-header">Collezione primavera estate 2023</h1>
       <CarouselHome/>
