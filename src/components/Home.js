@@ -101,8 +101,10 @@ function Home() {
       <Herothree />
 
       <h1 className="carousel-header">Collezione primavera estate 2023</h1>
+      <div className="carosello">
       <CarouselHome/>
       <Carousel />
+      </div>
 
       <Footer></Footer>
     </div>
