@@ -15,7 +15,7 @@ import CookieBanner from "./CookieBanner";
 import { posthog } from 'posthog-js';
 import CarouselHome from "./CarouselHome";
 import Carousel from "./Carousel";
-import Collection from "-/Collection"
+import Collection from "./Collection"
 
 const homeContainerStyle = {
   width: '100%',
