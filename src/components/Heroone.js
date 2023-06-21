@@ -1,5 +1,4 @@
 import { Parallax,  } from 'react-parallax';
-import backgroundImage from '../assets/giacche.jpg';
 import nuovaImmagine from '../assets/orizzontale-home-hd.jpg';
 import './Heroone.css';
 
