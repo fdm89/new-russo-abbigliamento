@@ -1,16 +1,16 @@
-import { Parallax,  } from 'react-parallax';
-import nuovaImmagine from '../assets/orizzontale-home-hd.jpg';
+import React from 'react'; 
+import nuovaImmagine from '../assets/orizzontale-home-nohd.jpg';
 import './Heroone.css';
 
 function Heroone() {
   return (
-    <Parallax className='image' blur={0} bgImage={nuovaImmagine} strength={200} bgImageStyle={{minHeight:"100vh"}}>
+    
      
       <div className='content'>
-        <span className="img-txt">Collezione primavera estate</span>
+        <img src={nuovaImmagine} alt=''></img>
       </div>
      
-    </Parallax>
+  
   );
 };
 
