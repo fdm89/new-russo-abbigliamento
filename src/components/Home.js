@@ -14,6 +14,7 @@ import Button from "./Button";
 import CookieBanner from "./CookieBanner";
 import { posthog } from 'posthog-js';
 import CarouselHome from "./CarouselHome";
+import Carousel from "./Carousel";
 
 const homeContainerStyle = {
   width: '100%',
@@ -101,6 +102,7 @@ function Home() {
 
       <h1 className="carousel-header">Collezione primavera estate 2023</h1>
       <CarouselHome/>
+      <Carousel />
 
       <Footer></Footer>
     </div>
