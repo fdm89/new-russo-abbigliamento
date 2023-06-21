@@ -9,7 +9,7 @@ function Herotwo() {
   return (
    
       <div className="content">
-        <img src={nuovaImmagine}></img>
+        <img src={nuovaImmagine} alt=''></img>
       </div>
     
   );
