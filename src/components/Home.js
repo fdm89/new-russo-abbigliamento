@@ -2,6 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import { Helmet } from 'react-helmet';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDoubleDown } from "@fortawesome/free-solid-svg-icons";
+import { useMediaQuery } from 'react-responsive';
 import backgroundImage1 from '../assets/home1.jpg';
 import backgroundImage2 from '../assets/home2.jpg';
 import backgroundImage3 from '../assets/home3.jpg';
@@ -14,6 +15,7 @@ import Button from "./Button";
 import CookieBanner from "./CookieBanner";
 import { posthog } from 'posthog-js';
 import Nuovocarosello from "./nuovocarosello";
+import CarouselHome from './CarouselHome';
 
 
 
@@ -43,6 +45,8 @@ const images = [
 const imageChangeInterval = 5000; // Change image every 5 seconds
 
 
+
+
 function Home() {
   const homeRef = useRef(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -65,6 +69,10 @@ function Home() {
   const handleImageLoad = () => {
     setIsImageLoaded(true);
   };
+
+  const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
+  const isDesktop = useMediaQuery({ query: '(min-width: 1024px)' });
+  const isTablet = useMediaQuery({ query: '(min-width: 768px) and (max-width: 1023px)' });
 
   return (
     <div className="home-container" ref={homeRef}>
@@ -103,8 +111,8 @@ function Home() {
 
       <h1 className="carousel-header">Collezione primavera estate 2023</h1>
       
-      
-      <Nuovocarosello/>
+      {isDesktop && !isTablet && <CarouselHome />}
+      {(isMobile || isTablet) && <Nuovocarosello />}
       
      
 
