@@ -1,5 +1,7 @@
 import React, { useState, useEffect, } from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import './Navbar.css';
 import logo from '../assets/logo.png';
 
@@ -33,9 +35,7 @@ function Navbar() {
         <Link rel="canonical" to="/contact" className="navbar-item underline-link" onClick={toggleMenu}>Contact</Link>
       </div>
       <button className={`navbar-toggle ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenu}>
-        <span className={`navbar-span ${scroll ? 'navbar-span--scroll' : ''}`}></span>
-        <span className={`navbar-span ${scroll ? 'navbar-span--scroll' : ''}`}></span>
-        <span className={`navbar-span ${scroll ? 'navbar-span--scroll' : ''}`}></span>
+      <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars}  className="burger-icon" />
       </button>
     </nav>
   );

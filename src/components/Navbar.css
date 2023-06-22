@@ -131,6 +131,11 @@
   .navbar.scrolled .navbar-item {
     color: #000;
   }
+
+  .burger-icon{
+    color: #000;
+    z-index: 99;
+  }
   
   @media (max-width: 1024px) {
     .navbar-menu {
