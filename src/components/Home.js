@@ -53,7 +53,15 @@ function Home() {
 
       <div  style={homeContainerStyle}>
         
-        <video onLoadedData={handleVideoLoad} className={`background-video ${isVideoLoaded ? "loaded" : ""}`} src={video} autoPlay loop muted/>
+      <video 
+    onLoadedData={handleVideoLoad} 
+    className={`background-video ${isVideoLoaded ? "loaded" : ""}`} 
+    src={video} 
+    autoPlay 
+    loop 
+    muted 
+    playsinline
+/>
         
       </div>
 
