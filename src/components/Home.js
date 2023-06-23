@@ -2,77 +2,38 @@ import React, { useRef, useEffect, useState } from "react";
 import { Helmet } from 'react-helmet';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDoubleDown } from "@fortawesome/free-solid-svg-icons";
-import { useMediaQuery } from 'react-responsive';
-import backgroundImage1 from '../assets/home1.jpg';
-import backgroundImage2 from '../assets/home2.jpg';
-import backgroundImage3 from '../assets/home3.jpg';
 import './Home.css';
 import Heroone from "./Heroone";
 import Herotwo from "./Herotwo";
-import Herothree from "./Herothree";
 import Footer from "./Footer";
 import Button from "./Button";
 import CookieBanner from "./CookieBanner";
 import { posthog } from 'posthog-js';
-import Nuovocarosello from "./nuovocarosello";
-import CarouselHome from './CarouselHome';
-
-
+import video from '../assets/RUSSOVIDEO(1).mp4';
+import CarouselHome from "./CarouselHome";
 
 const homeContainerStyle = {
   width: '100%',
-  height: '100vh',
+  height: '120vh',
   position: 'relative',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
+  
 };
-
-const images = [
-  {
-    url: backgroundImage1
-    
-  },
-  {
-    url: backgroundImage2
-    
-  },
-  {
-    url: backgroundImage3
-    
-  },
-];
-const imageChangeInterval = 5000; // Change image every 5 seconds
-
-
-
 
 function Home() {
   const homeRef = useRef(null);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [isImageLoaded, setIsImageLoaded] = useState(false);
-
-  useEffect(() => {
-    const imageChangeTimer = setInterval(() => {
-      setCurrentImageIndex(prevIndex => (prevIndex + 1) % images.length);
-    }, imageChangeInterval);
-
-    return () => {
-      clearInterval(imageChangeTimer);
-    };
-  }, []);
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+  
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" });
   }, []);
 
-  const handleImageLoad = () => {
-    setIsImageLoaded(true);
+  const handleVideoLoad = () => {
+    setIsVideoLoaded(true);
   };
-
-  const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
-  const isDesktop = useMediaQuery({ query: '(min-width: 1024px)' });
-  const isTablet = useMediaQuery({ query: '(min-width: 768px) and (max-width: 1023px)' });
 
   return (
     <div className="home-container" ref={homeRef}>
@@ -90,13 +51,10 @@ function Home() {
       </a>
       {posthog.has_opted_out_capturing() || posthog.has_opted_in_capturing() ? null : <CookieBanner />}
 
-      <div className="background-image" style={homeContainerStyle}>
-      <img
-  className={`test ${isImageLoaded ? "loaded" : ""}`}
-  src={images[currentImageIndex].url}
-  alt="Back"
-  onLoad={handleImageLoad}
-/>
+      <div  style={homeContainerStyle}>
+        
+        <video onLoadedData={handleVideoLoad} className={`background-video ${isVideoLoaded ? "loaded" : ""}`} src={video} autoPlay loop muted/>
+        
       </div>
 
       <div className="banner" id="banner">
@@ -107,14 +65,9 @@ function Home() {
       </div>
       <Heroone />
       <Herotwo />
-      <Herothree />
 
       <h1 className="carousel-header">Collezione primavera estate 2023</h1>
-      
-      {isDesktop && !isTablet && <CarouselHome />}
-      {(isMobile || isTablet) && <Nuovocarosello />}
-      
-     
+      <CarouselHome></CarouselHome>
 
       <Footer></Footer>
     </div>

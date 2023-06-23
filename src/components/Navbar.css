@@ -60,6 +60,9 @@
     background-color: transparent;
     border: none;
     font-size: 1.5rem;
+    outline: none;
+    background-color: transparent;
+    
   }
   
   .navbar-toggle {
@@ -69,26 +72,19 @@
     align-items: center;
     height: 20px;
     cursor: pointer;
+    outline: none;
+    background-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+    
   }
   
-  .navbar-toggle-icon {
-    display: block;
-    width: 22px;
-    height: 2px;
-    background-color: #fff;
-    transition: transform 0.3s ease-in-out;
-  }
+ 
   
   .scrolled .navbar-toggle-icon {
     background-color: #000;
   }
   
-  .navbar-toggle span {
-    width: 25px;
-    height: 2px;
-    background-color: black;
-    transition: all 0.3s ease-in-out;
-  }
+
   
   .navbar--scroll {
     background-color: #f2f0e8;
@@ -98,21 +94,7 @@
     color: black;
   }
   
-  .navbar-toggle .navbar-span--scroll {
-    background-color: black;
-  }
-  
-  .navbar-toggle.open span:nth-child(1) {
-    transform: rotate(-45deg) translate(-4px, 5px);
-  }
-  
-  .navbar-toggle.open span:nth-child(2) {
-    opacity: 0;
-  }
-  
-  .navbar-toggle.open span:nth-child(3) {
-    transform: rotate(45deg) translate(-3px, -5px);
-  }
+
   
   .navbar-close {
     position: absolute;
@@ -135,6 +117,8 @@
   .burger-icon{
     color: #000;
     z-index: 99;
+    
+    
   }
   
   @media (max-width: 1024px) {
@@ -164,10 +148,16 @@
   
     .navbar-toggle {
       display: flex;
+      outline: none;
+      background-color: transparent;
     }
   
     .navbar-close {
       display: block;
+    }
+
+    .underline-link:hover::after {
+      transform: scaleX(0);
     }
   }
   
