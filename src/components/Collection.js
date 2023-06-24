@@ -4,6 +4,7 @@ import './Collection.css';
 import Footer from './Footer';
 import Carousel from './Carousel';
 import CarouselTwo from './CarouselTwo';
+import CarouselThree from "./CarouselThree";
 
 function Collection() {
     useEffect(() => {
@@ -21,11 +22,8 @@ function Collection() {
         <CarouselTwo></CarouselTwo>
         <h2>Abiti</h2>
         <Carousel></Carousel>
-        
-        <CarouselTwo></CarouselTwo>
-        
-        
-        <Footer></Footer>
+        <CarouselThree />
+       <Footer></Footer>
     </div>
     
 }
