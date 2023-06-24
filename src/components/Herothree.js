@@ -1,5 +1,5 @@
 import React from 'react'; 
-import nuovaImmagine from '../assets/hero3.jpg';
+import nuovaImmagine from '../assets/hero4.jpg';
 import './Herothree.css';
 
 function Herothree() {

@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Carousel.css';
 import { motion } from 'framer-motion';
-import image1 from '../assets/spezzato-beige-1.jpg';
-import image2 from '../assets/spezzato-beige-2.jpg';
-import image3 from '../assets/scarpa-1.jpg';
-import image4 from '../assets/spezzato-verde-1.jpg';
-import image5 from '../assets/spezzato-verde-2.jpg';
-import image6 from '../assets/scarpa-2.jpg';
+import image1 from '../assets/outfit-1.jpg';
+import image2 from '../assets/outfit-2.jpg';
+import image3 from '../assets/outfit-3.jpg';
+import image4 from '../assets/outfit-4.jpg';
+import image5 from '../assets/outfit-5.jpg';
+import image6 from '../assets/outfit-6.jpg';
 
 
 const images = [image1, image2, image3, image4, image5, image6];

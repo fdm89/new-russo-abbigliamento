@@ -11,7 +11,7 @@ function Footer() {
       <a  href="https://www.instagram.com/russoabbigliamento/?hl=en"><FontAwesomeIcon icon={faInstagram} /></a>
     </div>
     <p>
-       R.G.S. Group SRL P.IVA: 04884990658
+       Russo Abbigliamento P.IVA: 04861580654
     </p>
     <Link to="/NoteLegali" className='note-legali'>Note Legali</Link>
   

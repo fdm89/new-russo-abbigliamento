@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Carousel.css';
 import { motion } from 'framer-motion';
-import image1 from '../assets/abito-beige-1.jpg';
-import image2 from '../assets/abito-beige-2.jpg';
-import image3 from '../assets/abito-blu-1.jpg';
-import image4 from '../assets/abito-blu-2.jpg';
+import image1 from '../assets/abito1.jpg';
+import image2 from '../assets/abito2.jpg';
+import image3 from '../assets/abito3.jpg';
+import image4 from '../assets/abito4.jpg';
 
 
 const images = [image1, image2, image3, image4];

@@ -3,14 +3,18 @@ import { Helmet } from 'react-helmet';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDoubleDown } from "@fortawesome/free-solid-svg-icons";
 import './Home.css';
+import { useMediaQuery } from 'react-responsive';
 import Heroone from "./Heroone";
 import Herotwo from "./Herotwo";
+import Herothree from "./Herothree";
 import Footer from "./Footer";
 import Button from "./Button";
 import CookieBanner from "./CookieBanner";
 import { posthog } from 'posthog-js';
 import video from '../assets/RUSSOVIDEO(1).mp4';
 import CarouselHome from "./CarouselHome";
+import Nuovocarosello from "./nuovocarosello";
+import Video from './Video'
 
 const homeContainerStyle = {
   width: '100%',
@@ -35,6 +39,10 @@ function Home() {
     setIsVideoLoaded(true);
   };
 
+  const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
+  const isDesktop = useMediaQuery({ query: '(min-width: 1024px)' });
+  const isTablet = useMediaQuery({ query: '(min-width: 768px) and (max-width: 1023px)' });
+
   return (
     <div className="home-container" ref={homeRef}>
       <Helmet>
@@ -53,29 +61,26 @@ function Home() {
 
       <div  style={homeContainerStyle}>
         
-      <video 
-    onLoadedData={handleVideoLoad} 
-    className={`background-video ${isVideoLoaded ? "loaded" : ""}`} 
-    src={video} 
-    autoPlay 
-    loop 
-    muted 
-    playsinline
-/>
+      
+
+<Video onLoadedData={handleVideoLoad}
+className={`background-video ${isVideoLoaded ? "loaded" : ""}`}  
+video={video} />
         
       </div>
 
       <div className="banner" id="banner">
-        <p>Outerwear</p>
         <h1>KEEP ON MOVING</h1>
-        <p>Vieni a scoprire la nostra nuova collezione primavera estate 2023</p>
+        <p>Vieni a scoprire la nostra nuova collezione s/s 2023</p>
         <Button />
       </div>
       <Heroone />
       <Herotwo />
+      <Herothree />
 
       <h1 className="carousel-header">Collezione primavera estate 2023</h1>
-      <CarouselHome></CarouselHome>
+      {isDesktop && !isTablet && <CarouselHome />}
+      {(isMobile || isTablet) && <Nuovocarosello />}
 
       <Footer></Footer>
     </div>

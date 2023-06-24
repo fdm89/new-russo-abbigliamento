@@ -1,12 +1,19 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './nuovocarosello.css'
 import {motion} from 'framer-motion';
-import image1 from '../assets/abito-beige-1.jpg';
-import image2 from '../assets/abito-beige-2.jpg';
-import image3 from '../assets/abito-blu-1.jpg';
-import image4 from '../assets/abito-blu-2.jpg';
+import image1 from '../assets/carosello-home-1.jpg';
+import image2 from '../assets/carosello-home.jpg';
+import image3 from '../assets/carosello-home-3.jpg';
+import image4 from '../assets/carosello-home-4.jpg';
+import image5 from '../assets/carosello-home-5.jpg';
+import image6 from '../assets/carosello-home-6.jpg';
 
-const images = [image1, image2, image3, image4];
+const images = [image2,
+    image4,
+    image1,
+    image3,
+    image5,
+    image6,];
 
 function Nuovocarosello() {
     const carousel = useRef();

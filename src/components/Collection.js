@@ -17,14 +17,13 @@ function Collection() {
                 <meta name="keywords" content="collezione, abiti, camicie, maglieria, abbigliamento uomo, maglieria, camiceria, pantaloni, capispalla, Made in Italy, sartoriale, abiti" />
             </Helmet>
         <h1>Collection</h1>
-        <h2>Completi Spezzati</h2>
+        <h2>Outfits</h2>
         <CarouselTwo></CarouselTwo>
         <h2>Abiti</h2>
         <Carousel></Carousel>
-        <h2>Completi Spezzati</h2>
+        
         <CarouselTwo></CarouselTwo>
-        <h2>Completi Spezzati</h2>
-        <CarouselTwo></CarouselTwo>
+        
         
         <Footer></Footer>
     </div>

@@ -17,7 +17,7 @@ function NoteLegali() {
       <h1 className='title'>Note legali</h1>
       <h2 className='subtitle'>Privacy</h2>
       <div className='text'>
-      <p>R.G.S. Group SRL - con sede legale ed amministrativa in Via Vicoletto Pepi 7, 84016 Pagani (SA) , ideatore e promotore delle attività disponibili nel sito www.russoabbigliamento.com, si riserva il diritto di utilizzare i dati personali, forniti volontariamente dagli Utenti, nel rispetto delle vigenti normative (artt 13 e ss. D. Lgs. 196/2003).</p>
+      <p>R.G.S. Group SRL - con sede legale ed amministrativa in Corso Umberto I, 161 84013 Cava de' Tirreni (SA) , ideatore e promotore delle attività disponibili nel sito www.russoabbigliamento.com, si riserva il diritto di utilizzare i dati personali, forniti volontariamente dagli Utenti, nel rispetto delle vigenti normative (artt 13 e ss. D. Lgs. 196/2003).</p>
       <p>
 Si invitano pertanto gli Utenti a visitare periodicamente questa sezione per aggiornarsi su variazioni relative a modifiche della legislazione attuale.
 R.G.S. Group SRL   garantisce agli utenti che il trattamento dei dati personali sarà riservato ad utilizzi strettamente connessi e correlati alla prestazione dei propri servizi, alla facilitazione della gestione del sito e dell’evasione degli ordini.</p>
