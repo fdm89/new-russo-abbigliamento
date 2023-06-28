@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './NoteLegali.css';
-import Footer from './Footer';
+
 
 
 
@@ -42,7 +42,7 @@ Tuttavia Russo Abbigliamento  non può garantire ai propri utenti che le misure 
 La richiesta delle informazioni sopra elencate può essere rinnovata con un intervallo minimo di 90 giorni, fatta eccezione per quei casi ove sussista giusta causa: cancellazione o modifica di tali dati a causa di violazione della legge; cancellazione di quei dati che non sono utilizzabili per i motivi per i quali sono stati raccolti</p>
       </div>
 
-      <Footer></Footer>
+      
     </div>
     
     

@@ -1,7 +1,6 @@
 import React, {useEffect} from 'react';
 import { Helmet } from 'react-helmet';
 import './Collection.css';
-import Footer from './Footer';
 import Carousel from './Carousel';
 import CarouselTwo from './CarouselTwo';
 import CarouselThree from "./CarouselThree";
@@ -23,7 +22,7 @@ function Collection() {
         <h2>Abiti</h2>
         <Carousel></Carousel>
         <CarouselThree />
-       <Footer></Footer>
+     
     </div>
     
 }

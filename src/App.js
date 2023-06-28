@@ -9,18 +9,21 @@ import { PulseLoader } from "react-spinners";
 import './App.css';
 import NoteLegali from "./components/NoteLegali";
 import DoveSiamo from "./components/DoveSiamo";
+import Footer from "./components/Footer";
 
 
 
 
 function App() {
   const [loading, setLoading] = useState(false);
-    useEffect(() =>{
-         setLoading(true)
-         setTimeout(()=>{
-           setLoading(false)
-         }, 2000)
-    }, [])
+  useEffect(() => {
+    if (!window.snapSaveState) {
+      setLoading(true);
+      setTimeout(() => {
+        setLoading(false);
+      }, 2000);
+    }
+  }, []);
 
   return (
     <div className="App">
@@ -46,7 +49,7 @@ function App() {
             <Route path="/notelegali" element={<NoteLegali />} />
             <Route path="/*" element={<Navigate to="/home" replace={true} />} />
           </Routes>
-          
+          <Footer />
         </Router>
       )}
     </div>

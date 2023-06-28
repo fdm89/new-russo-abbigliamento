@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './Contact.css';
-import Footer from './Footer';
 import emailjs from '@emailjs/browser';
 import { Helmet } from 'react-helmet';
 
@@ -42,7 +41,7 @@ function Contact() {
             from_name: form.email,
             to_name: 'Russo abbigliamento',
             from_email: form.email,
-            to_email: 'fulvio.dimaio1@gmail.com',
+            to_email: 'info@russoabbigliamento.com',
             message: form.message,
           },
           'RUQMrel50iD53TH2T'
@@ -127,7 +126,7 @@ function Contact() {
 </div>
         </div>
         
-        <Footer></Footer>
+        
     </div>
     
 }

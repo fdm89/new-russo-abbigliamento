@@ -7,7 +7,6 @@ import { useMediaQuery } from 'react-responsive';
 import Heroone from "./Heroone";
 import Herotwo from "./Herotwo";
 import Herothree from "./Herothree";
-import Footer from "./Footer";
 import Button from "./Button";
 import CookieBanner from "./CookieBanner";
 import { posthog } from 'posthog-js';
@@ -18,7 +17,7 @@ import Video from './Video'
 
 const homeContainerStyle = {
   width: '100%',
-  height: '120vh',
+  minHeight: '120vh',
   position: 'relative',
   display: 'flex',
   alignItems: 'center',
@@ -78,11 +77,11 @@ video={video} />
       <Herotwo />
       <Herothree />
 
-      <h1 className="carousel-header">Collezione primavera estate 2023</h1>
+      <h1 className="carousel-header">Collezione s/s 2023</h1>
       {isDesktop && !isTablet && <CarouselHome />}
       {(isMobile || isTablet) && <Nuovocarosello />}
 
-      <Footer></Footer>
+      
     </div>
   );
 }

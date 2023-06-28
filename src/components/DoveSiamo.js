@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import './DoveSiamo.css';
-import Footer from './Footer';
+
 
 
 
@@ -38,7 +38,7 @@ function DoveSiamo() {
          </div>
          
 
-      <Footer></Footer>
+      
     </div>
     
     

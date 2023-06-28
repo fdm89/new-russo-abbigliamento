@@ -2,7 +2,7 @@ import React, { useEffect, } from 'react';
 import { Helmet } from 'react-helmet';
 import './About.css';
 import image1 from '../assets/logo.png';
-import Footer from './Footer';
+
 
 
  
@@ -33,7 +33,7 @@ function About() {
       
 
       
-      <Footer></Footer>
+      
       
     </div>
     
