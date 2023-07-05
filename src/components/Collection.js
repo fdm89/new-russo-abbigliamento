@@ -4,6 +4,7 @@ import './Collection.css';
 import Carousel from './Carousel';
 import CarouselTwo from './CarouselTwo';
 import CarouselThree from "./CarouselThree";
+import SwiperCarousel from './SwiperCarousel';
 
 function Collection() {
     useEffect(() => {
@@ -18,6 +19,7 @@ function Collection() {
             </Helmet>
         <h1>Collection</h1>
         <h2>Outfits</h2>
+        <SwiperCarousel/>
         <CarouselTwo></CarouselTwo>
         <h2>Abiti</h2>
         <Carousel></Carousel>

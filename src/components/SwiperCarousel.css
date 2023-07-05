@@ -1,0 +1,10 @@
+.foto{
+    height: 40%;
+    display: block;
+  margin: 0 auto; /* Centra l'immagine orizzontalmente */
+  max-width: 80%;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: black /* Cambia il colore del bullet attivo a rosso */
+  }

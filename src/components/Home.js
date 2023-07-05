@@ -14,6 +14,7 @@ import video from '../assets/RUSSOVIDEO(1).mp4';
 import CarouselHome from "./CarouselHome";
 import Nuovocarosello from "./nuovocarosello";
 import Video from './Video'
+import SwiperCarousel from "./SwiperCarousel";
 
 const homeContainerStyle = {
   width: '100%',
@@ -80,6 +81,8 @@ video={video} />
       <h1 className="carousel-header">Collezione s/s 2023</h1>
       {isDesktop && !isTablet && <CarouselHome />}
       {(isMobile || isTablet) && <Nuovocarosello />}
+
+      <SwiperCarousel/>
 
       
     </div>
