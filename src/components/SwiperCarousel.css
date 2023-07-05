@@ -1,8 +1,9 @@
 .foto{
-    height: 40%;
-    display: block;
+  height: 100%;
+  display: block;
   margin: 0 auto; /* Centra l'immagine orizzontalmente */
   max-width: 80%;
+  margin-bottom: 30px;
 }
 
 .swiper-pagination-bullet-active {

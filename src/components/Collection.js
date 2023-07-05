@@ -1,10 +1,9 @@
 import React, {useEffect} from 'react';
 import { Helmet } from 'react-helmet';
 import './Collection.css';
-import Carousel from './Carousel';
-import CarouselTwo from './CarouselTwo';
-import CarouselThree from "./CarouselThree";
-import SwiperCarousel from './SwiperCarousel';
+import SwiperCarouselAbiti from './SwiperCarouselAbiti';
+import SwiperCarouselOutfits from './SwiperCarouselOutfits';
+import SwiperCarouselMix from './SwiperCarouselMix';
 
 function Collection() {
     useEffect(() => {
@@ -19,11 +18,11 @@ function Collection() {
             </Helmet>
         <h1>Collection</h1>
         <h2>Outfits</h2>
-        <SwiperCarousel/>
-        <CarouselTwo></CarouselTwo>
+        <SwiperCarouselOutfits/>
         <h2>Abiti</h2>
-        <Carousel></Carousel>
-        <CarouselThree />
+        <SwiperCarouselAbiti/>
+        <br></br>
+        <SwiperCarouselMix/>
      
     </div>
     

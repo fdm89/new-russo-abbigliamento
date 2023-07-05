@@ -6,13 +6,15 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-import image1 from '../assets/abito1.jpg';
-import image2 from '../assets/abito2.jpg';
-import image3 from '../assets/abito3.jpg';
-import image4 from '../assets/abito4.jpg';
-import image5 from '../assets/abito4.jpg';
-import image6 from '../assets/abito4.jpg';
-import { motion } from 'framer-motion';
+import image1 from '../assets/outfit-1.jpg';
+import image2 from '../assets/outfit-2.jpg';
+import image3 from '../assets/outfit-3.jpg';
+import image4 from '../assets/outfit-4.jpg';
+import image5 from '../assets/outfit-5.jpg';
+import image6 from '../assets/outfit-6.jpg';
+
+
+
 
 
 
@@ -24,15 +26,10 @@ import './SwiperCarousel.css'
 
 
 
-function SwiperCarousel() {
+function SwiperCarouselOutfits() {
   return (
     <>
-    <motion.div
-          
-          initial={{ x: 100 }}
-          animate={{ x: 0 }}
-          transition={{ duration: 0.8 }}
-        >
+    
       <Swiper
         slidesPerView={3}
         spaceBetween={10}
@@ -67,10 +64,12 @@ function SwiperCarousel() {
         <SwiperSlide><img className='foto' src={image4} alt="Slide 1" /></SwiperSlide>
         <SwiperSlide><img className='foto' src={image5} alt="Slide 1" /></SwiperSlide>
         <SwiperSlide><img className='foto' src={image6} alt="Slide 1" /></SwiperSlide>
+
+        
       </Swiper>
-      </motion.div>
+      
     </>
   );
 }
 
-export default SwiperCarousel
+export default SwiperCarouselOutfits

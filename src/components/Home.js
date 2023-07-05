@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDoubleDown } from "@fortawesome/free-solid-svg-icons";
 import './Home.css';
-import { useMediaQuery } from 'react-responsive';
 import Heroone from "./Heroone";
 import Herotwo from "./Herotwo";
 import Herothree from "./Herothree";
@@ -11,10 +10,9 @@ import Button from "./Button";
 import CookieBanner from "./CookieBanner";
 import { posthog } from 'posthog-js';
 import video from '../assets/RUSSOVIDEO(1).mp4';
-import CarouselHome from "./CarouselHome";
-import Nuovocarosello from "./nuovocarosello";
 import Video from './Video'
-import SwiperCarousel from "./SwiperCarousel";
+import SwiperCarouselHome from "./SwiperCarouselHome";
+
 
 const homeContainerStyle = {
   width: '100%',
@@ -39,9 +37,6 @@ function Home() {
     setIsVideoLoaded(true);
   };
 
-  const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
-  const isDesktop = useMediaQuery({ query: '(min-width: 1024px)' });
-  const isTablet = useMediaQuery({ query: '(min-width: 768px) and (max-width: 1023px)' });
 
   return (
     <div className="home-container" ref={homeRef}>
@@ -79,10 +74,9 @@ video={video} />
       <Herothree />
 
       <h1 className="carousel-header">Collezione s/s 2023</h1>
-      {isDesktop && !isTablet && <CarouselHome />}
-      {(isMobile || isTablet) && <Nuovocarosello />}
 
-      <SwiperCarousel/>
+
+      <SwiperCarouselHome/>
 
       
     </div>
